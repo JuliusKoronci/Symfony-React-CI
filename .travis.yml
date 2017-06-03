@@ -3,16 +3,18 @@ sudo: false
 dist: trusty
 php:
     - '7.1'
+matrix:
+  fast_finish: true
+  include:
+    - php: 7.1
 services:
     - memcached
-    - mongodb
     - redis-server
 before_script:
     # to fasten up installation with parallel downloading
     - composer global require hirak/prestissimo
-    # install composer dependencies
-    - composer install
 before_install:
+    - composer self-update
     - |
       # php.ini configuration
       INI=~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
@@ -22,11 +24,15 @@ before_install:
       echo session.gc_probability = 0 >> $INI
       echo opcache.enable_cli = 1 >> $INI
       echo apc.enable_cli = 1 >> $INI
-      echo extension = ldap.so >> $INI
       echo extension = redis.so >> $INI
       echo extension = memcached.so >> $INI
-      echo extension = mongodb.so >> $INI
 # do not send success notifications, they have no value
+install:
+    - composer install
+script:
+    - phpunit
+    - ./vendor/bin/php-cs-fixer fix --rules=@Symfony --diff --dry-run -v
+    - ./bin/console security:check --end-point=http://security.sensiolabs.org/check_lock
 notifications:
     email:
         on_success: never
