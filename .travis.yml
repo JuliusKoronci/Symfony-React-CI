@@ -30,7 +30,8 @@ before_install:
 install:
     - composer install
 script:
-    - phpunit
+    - phpunit --coverage-clover phpunit/clover.xml
+    - php phpunit/cover.php phpunit/clover.xml 99
     - ./vendor/bin/php-cs-fixer fix src --rules=@Symfony --diff --dry-run -v
     - ./bin/console security:check --end-point=http://security.sensiolabs.org/check_lock
 notifications:
