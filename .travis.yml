@@ -5,5 +5,7 @@ php:
   - '7.1'
 
 before_script:
+  # to fasten up installation with parallel downloading
+  - composer global require hirak/prestissimo
   # install composer dependencies
   - composer install
