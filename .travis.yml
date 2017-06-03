@@ -15,7 +15,6 @@ before_install:
     - |
       # php.ini configuration
       INI=~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
-      phpenv config-rm xdebug.ini || echo "xdebug not available"
       echo date.timezone = Europe/Paris >> $INI
       echo memory_limit = -1 >> $INI
       echo session.gc_probability = 0 >> $INI
