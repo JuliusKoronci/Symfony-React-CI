@@ -31,7 +31,7 @@ install:
     - composer install
 script:
     - phpunit
-    - ./vendor/bin/php-cs-fixer fix --rules=@Symfony --diff --dry-run -v
+    - ./vendor/bin/php-cs-fixer fix src --rules=@Symfony --diff --dry-run -v
     - ./bin/console security:check --end-point=http://security.sensiolabs.org/check_lock
 notifications:
     email:
