@@ -3,6 +3,8 @@ sudo: false
 dist: trusty
 php:
     - '7.1'
+node_js:
+  - "stable"
 matrix:
   fast_finish: true
   include:
@@ -38,6 +40,7 @@ script:
     - ./bin/console lint:yaml app/config
     - ./bin/console lint:twig app/Resources
     - ./bin/console security:check --end-point=http://security.sensiolabs.org/check_lock
+    - npm init
 notifications:
     email:
         on_success: never
