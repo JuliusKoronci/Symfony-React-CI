@@ -3,3 +3,7 @@ sudo: false
 dist: trusty
 php:
   - '7.1'
+
+before_script:
+  # install composer dependencies
+  - composer install
