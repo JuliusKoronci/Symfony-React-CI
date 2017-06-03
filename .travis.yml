@@ -10,9 +10,6 @@ matrix:
 services:
     - memcached
     - redis-server
-before_script:
-    # to fasten up installation with parallel downloading
-    - composer global require hirak/prestissimo
 before_install:
     - composer self-update
     - |
@@ -28,6 +25,7 @@ before_install:
       echo extension = memcached.so >> $INI
 # do not send success notifications, they have no value
 install:
+    - composer global require hirak/prestissimo
     - composer install
 script:
     - phpunit --coverage-clover phpunit/clover.xml
