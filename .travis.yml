@@ -18,6 +18,7 @@ cache:
     - $HOME/.composer/cache/files
 before_install:
     - composer self-update
+    - npm install yarn -g
     - |
       # php.ini configuration
       INI=~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
@@ -40,7 +41,7 @@ script:
     - ./bin/console lint:yaml app/config
     - ./bin/console lint:twig app/Resources
     - ./bin/console security:check --end-point=http://security.sensiolabs.org/check_lock
-    - cd react-app && npm install && npm run test && npm run flow && npm run coverage && npm run lint
+    - cd react-app && yarn install && yarn test && yarn flow && yarn coverage && yarn lint
 notifications:
     email:
         on_success: never
