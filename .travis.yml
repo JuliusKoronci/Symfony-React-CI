@@ -40,7 +40,7 @@ script:
     - ./bin/console lint:yaml app/config
     - ./bin/console lint:twig app/Resources
     - ./bin/console security:check --end-point=http://security.sensiolabs.org/check_lock
-    - cd react-app && npm install && npm run test && npm run flow
+    - cd react-app && npm install && npm run test && npm run flow && npm run coverage
 notifications:
     email:
         on_success: never
