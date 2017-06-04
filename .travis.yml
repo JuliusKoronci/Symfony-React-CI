@@ -40,6 +40,8 @@ script:
     - ./bin/console lint:yaml app/config
     - ./bin/console lint:twig app/Resources
     - ./bin/console security:check --end-point=http://security.sensiolabs.org/check_lock
+    - git submodule init
+    - git submodule update
     - cd react-app && npm install
 notifications:
     email:
