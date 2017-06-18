@@ -33,7 +33,7 @@ before_install:
 # do not send success notifications, they have no value
 install:
     - composer global require hirak/prestissimo
-    - composer install
+    - cd symfony-app && composer install
 script:
     - phpunit --coverage-clover phpunit/clover.xml
     - php phpunit/cover.php phpunit/clover.xml 99
