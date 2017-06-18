@@ -41,7 +41,7 @@ script:
     - ./bin/console lint:yaml app/config
     - ./bin/console lint:twig app/Resources
     - ./bin/console security:check --end-point=http://security.sensiolabs.org/check_lock
-    - cd react-app && yarn install && yarn test && yarn flow && yarn coverage && yarn lint
+    - cd react-app && git pull && yarn install && yarn test && yarn flow && yarn coverage && yarn lint
 notifications:
     email:
         on_success: never
