@@ -13,7 +13,7 @@ services:
     - memcached
     - redis-server
 addons:
-  mariadb: '10.0'
+    - mariadb
 # Cache composer packages so "composer install" is faster
 cache:
   directories:
