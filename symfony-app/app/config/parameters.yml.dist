@@ -7,6 +7,7 @@ parameters:
     database_name: symfony
     database_user: symfuser
     database_password: koronci22
+    redis_dsn: redis://localhost:6379
     # You should uncomment this if you want to use pdo_sqlite
     #database_path: '%kernel.project_dir%/var/data/data.sqlite'
 
