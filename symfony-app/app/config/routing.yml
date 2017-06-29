@@ -1,3 +1,7 @@
+igsem_auth:
+    resource: "@IgsemAuthBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation

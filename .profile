@@ -1,0 +1,1 @@
+alias sf="docker-compose exec php php /var/www/app/bin/console"
