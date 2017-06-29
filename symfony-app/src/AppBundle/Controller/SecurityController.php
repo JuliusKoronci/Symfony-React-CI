@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: juliuskoronci
  * Date: 25/06/2017
- * Time: 19:29
+ * Time: 19:29.
  */
 
 namespace AppBundle\Controller;
@@ -11,7 +11,6 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class SecurityController extends Controller
@@ -40,5 +39,4 @@ class SecurityController extends Controller
     public function checkAction(Request $request)
     {
     }
-
 }

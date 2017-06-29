@@ -1,0 +1,4 @@
+services:
+#    igsem_auth.example:
+#        class: Igsem\AuthBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

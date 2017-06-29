@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: juliuskoronci
  * Date: 25/06/2017
- * Time: 18:21
+ * Time: 18:21.
  */
 
 namespace Igsem\AuthBundle\DataFixtures\ORM;
@@ -18,7 +18,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 /**
  * Abstract Fixture class helps to manage references
  * between fixture classes in order to set relations
- * among other fixtures
+ * among other fixtures.
  *
  * @author Gediminas Morkevicius <gediminas.morkevicius@gmail.com>
  */
@@ -40,9 +40,10 @@ class LoadUserData extends AbstractFixture implements ContainerAwareInterface, O
     }
 
     /**
-     * Load data fixtures with the passed EntityManager
+     * Load data fixtures with the passed EntityManager.
      *
      * @param ObjectManager $manager
+     *
      * @throws \Symfony\Component\DependencyInjection\Exception\ServiceCircularReferenceException
      * @throws \Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException
      */
@@ -63,9 +64,9 @@ class LoadUserData extends AbstractFixture implements ContainerAwareInterface, O
     }
 
     /**
-     * Get the order of this fixture
+     * Get the order of this fixture.
      *
-     * @return integer
+     * @return int
      */
     public function getOrder(): int
     {
