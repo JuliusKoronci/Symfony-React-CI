@@ -9,7 +9,6 @@
 namespace Igsem\AuthBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Nelmio\ApiDocBundle\Annotation\Model;
 use Swagger\Annotations as SWG;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -23,20 +22,24 @@ class LoginController extends Controller
      *     description="Login to get a JWT token",
      *     produces={"application/json"},
      *     @SWG\Parameter(
-     *     in="body",
-     *     type="string",
-     *     name="_username",
-     *     required=true,
+     *          in="formData",
+     *          name="_username",
+     *          description="login name or email",
+     *          required=true,
+     *          type="string",
+     *          @SWG\Schema(type="string"),
      *   ),
      *     @SWG\Parameter(
-     *     in="body",
-     *     type="string",
-     *     name="_password",
-     *     required=true,
+     *          in="formData",
+     *          name="_password",
+     *          description="password",
+     *          required=true,
+     *          type="string",
+     *          @SWG\Schema(type="string"),
      *   ),
      *     @SWG\Response(
      *         response=200,
-     *         description="Dashboard overview."
+     *         description="JWT Token"
      *     ),
      *     @SWG\Response(
      *         response=401,
