@@ -16,7 +16,7 @@ swiftmailer:
     disable_delivery: true
 doctrine:
     dbal:
-        host:     db_test
-        dbname:   symfony_test
-        user:     symfuser
-        password: koronci22
+        host:     '%database_test_host%'
+        dbname:   '%database_test_name%'
+        user:     '%database_test_user%'
+        password: '%database_test_password%'
