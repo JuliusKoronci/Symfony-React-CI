@@ -38,8 +38,8 @@ install:
     - cd symfony-app
     - cp app/config/parameters.yml.travis app/config/parameters.yml
     - composer install
-    - php app/console doctrine:database:create --env=test
-    - php app/console doctrine:schema:create --env=test
+    - ./bin/console doctrine:database:create --env=test
+    - ./bin/console doctrine:schema:create --env=test
 script:
     - phpunit --coverage-clover phpunit/clover.xml
     - php phpunit/cover.php phpunit/clover.xml 99
