@@ -10,3 +10,4 @@
 .idea
 redis/
 !redis/.gitkeep
+/symfony-app/phpunit/report/

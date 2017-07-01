@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: juliuskoronci
  * Date: 01/07/2017
- * Time: 10:33
+ * Time: 10:33.
  */
 
 namespace Igsem\AuthBundle\Tests\Repository;
@@ -12,8 +12,7 @@ use Igsem\AuthBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
 /**
- * Class UserRepositoryTest
- * @package Igsem\AuthBundle\Tests\Repository
+ * Class UserRepositoryTest.
  */
 class UserRepositoryTest extends KernelTestCase
 {
@@ -23,7 +22,7 @@ class UserRepositoryTest extends KernelTestCase
     private $em;
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     protected function setUp()
     {
@@ -52,7 +51,7 @@ class UserRepositoryTest extends KernelTestCase
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     protected function tearDown()
     {

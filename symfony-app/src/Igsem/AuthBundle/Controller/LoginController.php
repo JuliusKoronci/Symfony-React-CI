@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: juliuskoronci
  * Date: 29/06/2017
- * Time: 22:26
+ * Time: 22:26.
  */
 
 namespace Igsem\AuthBundle\Controller;
@@ -13,15 +13,12 @@ use Swagger\Annotations as SWG;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 /**
- * Class LoginController
+ * Class LoginController.
  *
  * Required for LexikJWTAuth and Swagger
- *
- * @package Igsem\AuthBundle\Controller
  */
 class LoginController extends Controller
 {
-
     /**
      * @Route("/api/login", name="api_login_check", methods={"POST"})
      * @SWG\Post(

@@ -17,6 +17,6 @@ swiftmailer:
 doctrine:
     dbal:
         host:     db
-        dbname:   symfony
+        dbname:   symfony_test
         user:     symfuser
         password: koronci22
