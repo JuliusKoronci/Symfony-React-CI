@@ -5,14 +5,17 @@ RUN apt-get update && apt-get install -y \
         libicu-dev \
     && pecl install apcu \
     && pecl install apcu_bc-1.0.3 \
+    && pecl install xdebug \
     && docker-php-ext-install \
         intl \
         opcache \
         pdo \
         pdo_mysql \
+
     && docker-php-ext-enable \
         intl \
         opcache \
+        xdebug \
         apcu
 
 # Permission fix

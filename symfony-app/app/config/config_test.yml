@@ -14,3 +14,9 @@ web_profiler:
 
 swiftmailer:
     disable_delivery: true
+doctrine:
+    dbal:
+        host:     db
+        dbname:   symfony
+        user:     symfuser
+        password: koronci22

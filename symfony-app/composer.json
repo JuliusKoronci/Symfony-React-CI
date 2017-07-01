@@ -28,6 +28,7 @@
     "jms/serializer-bundle": "^2.0",
     "lexik/jwt-authentication-bundle": "^2.4",
     "nelmio/api-doc-bundle": "~3.0@beta",
+    "phpunit/phpunit": "^6.2",
     "predis/predis": "^1.1",
     "sensio/distribution-bundle": "^5.0.19",
     "sensio/framework-extra-bundle": "^3.0.2",

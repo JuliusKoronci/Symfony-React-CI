@@ -8,13 +8,14 @@
          bootstrap="vendor/autoload.php"
 >
     <php>
-        <ini name="error_reporting" value="-1" />
-        <server name="KERNEL_CLASS" value="AppKernel" />
+        <ini name="error_reporting" value="-1"/>
+        <server name="KERNEL_CLASS" value="AppKernel"/>
     </php>
 
     <testsuites>
         <testsuite name="Project Test Suite">
             <directory>tests</directory>
+            <directory>src/Igsem/*Bundle/Tests</directory>
         </testsuite>
     </testsuites>
 
@@ -22,9 +23,22 @@
         <whitelist>
             <directory>src</directory>
             <exclude>
+                <file suffix=".php">src/Igsem/AuthBundle/Controller/LoginController.php</file>
                 <directory>src/*Bundle/Resources</directory>
                 <directory>src/*/*Bundle/Resources</directory>
                 <directory>src/*/Bundle/*Bundle/Resources</directory>
+                <directory>src/*Bundle/DataFixtures</directory>
+                <directory>src/*/*Bundle/DataFixtures</directory>
+                <directory>src/*/Bundle/*Bundle/DataFixtures</directory>
+                <directory>src/*Bundle/DataFixtures</directory>
+                <directory>src/*/*Bundle/DataFixtures</directory>
+                <directory>src/*/Bundle/*Bundle/DataFixtures</directory>
+                <directory>src/*Bundle/Entity</directory>
+                <directory>src/*/*Bundle/Entity</directory>
+                <directory>src/*/Bundle/*Bundle/Entity</directory>
+                <directory>src/*Bundle/DependencyInjection</directory>
+                <directory>src/*/*Bundle/DependencyInjection</directory>
+                <directory>src/*/Bundle/*Bundle/DependencyInjection</directory>
             </exclude>
         </whitelist>
     </filter>
