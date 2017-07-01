@@ -1,3 +1,7 @@
+igsem_utils:
+    resource: "@IgsemUtilsBundle/Resources/config/routing.yml"
+    prefix:   /
+
 NelmioApiDocBundle:
     resource: "@NelmioApiDocBundle/Resources/config/routing/swaggerui.xml"
     prefix:   /doc

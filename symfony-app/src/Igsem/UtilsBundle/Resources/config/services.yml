@@ -1,0 +1,4 @@
+services:
+#    igsem_utils.example:
+#        class: Igsem\UtilsBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

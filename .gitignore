@@ -1,6 +1,8 @@
 /symfony-app/app/config/parameters.yml
 /symfony-app/var/
+/db-data
 /symfony-app/vendor/
+/symfony-app/phpunit/report
 /symfony-app/web/bundles/
 /symfony-app/phpunit/clover.xml
 !symfony-app/var/cache/.gitkeep

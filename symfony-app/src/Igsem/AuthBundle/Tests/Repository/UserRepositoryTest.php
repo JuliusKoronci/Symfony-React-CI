@@ -9,30 +9,13 @@
 namespace Igsem\AuthBundle\Tests\Repository;
 
 use Igsem\AuthBundle\Entity\User;
-use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
+use Igsem\UtilsBundle\Tests\WithFixturesTestCase;
 
 /**
  * Class UserRepositoryTest.
  */
-class UserRepositoryTest extends KernelTestCase
+class UserRepositoryTest extends WithFixturesTestCase
 {
-    /**
-     * @var \Doctrine\ORM\EntityManager
-     */
-    private $em;
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function setUp()
-    {
-        self::bootKernel();
-
-        $this->em = static::$kernel->getContainer()
-            ->get('doctrine')
-            ->getManager();
-    }
-
     public function testLoadByUsername()
     {
         /** @var User $user */
@@ -48,16 +31,5 @@ class UserRepositoryTest extends KernelTestCase
             ->loadUserByUsername('Julino');
         $this->assertNotNull($user2);
         $this->assertEquals('Julino', $user2->getUsername());
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function tearDown()
-    {
-        parent::tearDown();
-
-        $this->em->close();
-        $this->em = null; // avoid memory leaks
     }
 }

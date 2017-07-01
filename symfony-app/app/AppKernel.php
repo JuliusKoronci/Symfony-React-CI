@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new \Lexik\Bundle\JWTAuthenticationBundle\LexikJWTAuthenticationBundle(),
             new AppBundle\AppBundle(),
             new Igsem\AuthBundle\IgsemAuthBundle(),
+            new Igsem\UtilsBundle\IgsemUtilsBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
