@@ -4,12 +4,18 @@ namespace Igsem\AuthBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\AdvancedUserInterface;
+use Swagger\Annotations as SWG;
 
 /**
  * User.
  *
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="Igsem\AuthBundle\Repository\UserRepository")
+ * @SWG\Definition(
+ *     definition="User",
+ *     type="object",
+ *     required={"username", "password", "email", "roles", "isActive"},
+ * )
  */
 class User implements AdvancedUserInterface, \Serializable
 {

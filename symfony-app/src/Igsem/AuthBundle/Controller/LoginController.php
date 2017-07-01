@@ -12,6 +12,13 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Swagger\Annotations as SWG;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+/**
+ * Class LoginController
+ *
+ * Required for LexikJWTAuth and Swagger
+ *
+ * @package Igsem\AuthBundle\Controller
+ */
 class LoginController extends Controller
 {
 
@@ -39,7 +46,11 @@ class LoginController extends Controller
      *   ),
      *     @SWG\Response(
      *         response=200,
-     *         description="JWT Token"
+     *         description="JWT Token ",
+     *          @SWG\Schema(
+     *              type="object",
+     *              @SWG\Property(property="token", type="string"),
+     *         )
      *     ),
      *     @SWG\Response(
      *         response=401,
