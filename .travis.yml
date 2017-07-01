@@ -36,8 +36,9 @@ before_install:
 install:
     - composer global require hirak/prestissimo
     - cd symfony-app
-    - cp app/config/parameters.yml.travis app/config/parameters.yml
     - composer install
+    - rm app/config/parameters.yml
+    - cp app/config/parameters.yml.travis app/config/parameters.yml
     - ./bin/console doctrine:database:create --env=test
     - ./bin/console doctrine:schema:create --env=test
 script:
