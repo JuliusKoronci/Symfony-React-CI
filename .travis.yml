@@ -35,7 +35,12 @@ before_install:
 # do not send success notifications, they have no value
 install:
     - composer global require hirak/prestissimo
-    - cd symfony-app && composer install
+    - cd symfony-app
+    - cp app/config/parameters.yml.travis app/config/parameters.yml
+    - composer install
+    - php app/console doctrine:database:create --env=test
+    - php app/console doctrine:schema:create --env=test
+    - php app/console doctrine:fixtures:load -n --env=test
 script:
     - phpunit --coverage-clover phpunit/clover.xml
     - php phpunit/cover.php phpunit/clover.xml 99
