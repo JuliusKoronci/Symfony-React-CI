@@ -17,9 +17,9 @@ test:
 	npm run --prefix react-app lint
 	npm run --prefix react-app flow
 setup:
-	rm -rf db-data
-	rm -rf symfony-app/var/jwt
-	rm symfony-app/app/config/parameters.yml
+	rm -rf db-data ||:
+	rm -rf symfony-app/var/jwt ||:
+	rm symfony-app/app/config/parameters.yml ||:
 	git submodule update --init --recursive
 	mkdir -p var/jwt
 	openssl genrsa -out var/jwt/private.pem -aes256 4096

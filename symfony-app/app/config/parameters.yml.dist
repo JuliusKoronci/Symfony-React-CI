@@ -8,7 +8,7 @@ parameters:
     database_user: symfuser
     database_password: koronci22
     database_test_host: db_test
-    database_test_port: 3307
+    database_test_port: 3306
     database_test_name: symfony_test
     database_test_user: symfuser
     database_test_password: koronci22
