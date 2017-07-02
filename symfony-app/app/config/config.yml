@@ -87,7 +87,7 @@ nelmio_api_doc:
             description: Just a starter project with everything set up
 nelmio_cors:
     paths:
-        '^/api/':
+        '^/api':
             allow_origin: ['*']
             allow_headers: ['*']
             allow_methods: ['POST', 'PUT', 'GET', 'DELETE']

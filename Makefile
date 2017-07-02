@@ -18,7 +18,9 @@ test:
 	npm run --prefix react-app flow
 setup:
 	git submodule update --init --recursive
-	cd react-app && npm i && cd ..
+	mkdir -p var/jwt
+	openssl genrsa -out var/jwt/private.pem -aes256 4096
+	openssl rsa -pubout -in var/jwt/private.pem -out var/jwt/public.pem
 	docker-compose down
 	docker-compose build
 	docker-compose up -d
@@ -26,6 +28,7 @@ setup:
 	docker-compose exec php php /var/www/app/bin/console doctrine:schema:update --force
 	docker-compose exec php php /var/www/app/bin/console doctrine:schema:update --env=test --force
 	docker-compose exec php php /var/www/app/bin/console doctrine:fixtures:load --no-interaction
+	cd react-app && npm i && cd ..
 	npm run --prefix react-app start
 start:
 	docker-compose up -d
