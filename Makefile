@@ -17,6 +17,8 @@ test:
 	npm run --prefix react-app lint
 	npm run --prefix react-app flow
 setup:
+	git submodule update --init --recursive
+	cd react-app && npm i && cd ..
 	docker-compose down
 	docker-compose build
 	docker-compose up -d

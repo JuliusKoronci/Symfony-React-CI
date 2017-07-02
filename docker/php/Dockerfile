@@ -2,6 +2,8 @@ FROM php:7.1-fpm
 
 # Install recommended extensions for Symfony
 RUN apt-get update && apt-get install -y \
+        git \
+        unzip \
         libicu-dev \
     && pecl install apcu \
     && pecl install apcu_bc-1.0.3 \
