@@ -26,6 +26,7 @@ setup:
 	docker-compose exec php php /var/www/app/bin/console doctrine:schema:update --force
 	docker-compose exec php php /var/www/app/bin/console doctrine:schema:update --env=test --force
 	docker-compose exec php php /var/www/app/bin/console doctrine:fixtures:load --no-interaction
+	npm run --prefix react-app start
 start:
 	docker-compose up -d
 	npm run --prefix react-app start
